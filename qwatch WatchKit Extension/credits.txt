@@ -1,0 +1,57 @@
+Quake Apple Watch (qWatch) port made by me, Tomas MyOwnClone Vymazal, but I was really standing on the shoulders of giants, adding / changing fraction of code compared to original Id release and original open source Mac & iOS ports.
+Major things this port does apart from existing Mac and iOS ports:
+* this one is based on quake SW rasterizer, no Metal acceleration involved, I have written a simple blitter to copy internal quake framebuffer to WatchKit image surface
+* controls adjusted for Apple Watch, touch, gyro and digital crown
+* as WatchKit does not support CoreAudio, I could not use existing audio code in Mac and iOS ports and written custom AVFoundation audio backend (mainly buffer handling & copy code)
+* Apple Watch has a speaker which does not like low freq "drone" sounds and portions of audio samples, so I have implemented ( really just copy-paste + ported high freq pass code from https://dsp.stackexchange.com/questions/73523/low-frequency-1hz-high-pass-filter ), otherwise real Watch device speaker would have a lot of clicking audio artefacts
+* adding some stats display
+* some small things to get all of the above running
+
+codebases this port is either based on, some knowledge or snippets was used from them or served as an inspiration:
+
+this port is largely based on:
+https://github.com/Izhido/Quake_For_OSX
+which is OFC based on original id software open source release
+
+https://github.com/tomkidd/Quake-iOS
+huge thanks to this guy, I have used a lot of knowledge (and possibly snippets) from his code
+
+other resources for knowledge, snippets or inspiration:
+
+https://github.com/Luiji/MakePAK
+used for modifying pak files (or making new ones) on Mac or Linux
+
+https://gist.github.com/noonat/1127614
+
+https://www.eecis.udel.edu/~portnoi/quake/quakecom.html#+movedown/-movedown
+documentation
+
+https://github.com/id-Software/quake-rerelease-qc
+the legends themselves
+
+https://fabiensanglard.net/quakeSource/index.php#rendition
+huge source of knowledge and respect to this guy!
+
+https://github.com/AudioKit/AudioKit + https://github.com/arielelkin/SwiftyAudio
+when trying to figure out how AVFoundation on Watch works, this was one of the inspirational and knowledge references
+
+https://gist.github.com/kristopherjohnson/0b0442c9b261f44cf19a + https://github.com/berndporr/iir1 + https://github.com/dimtass/dsp-c-filters
+high / low pass filter code used for knowledge extraction and inspiration
+
+https://dsp.stackexchange.com/questions/73523/low-frequency-1hz-high-pass-filter
+I have used modified version of high pass filter from this URL
+
+https://github.com/hotpaw2/auv3test5
+when trying to figure out how AVFoundation on Watch works, this was one of the inspirational and knowledge references
+
+https://github.com/shu223/watchOS-2-Sampler + https://github.com/wangyanchang21/Watch-App-Sampler
+great resource for figurin out how some WatchKit APIs work
+
+app icon taken from https://github.com/Izhido/Quake_For_OSX
+
+https://stackoverflow.com/questions/50449384/how-to-implement-apple-watch-crown-delegate-using-objective-c
+nice reference on to how to use digital crown API
+
+
+
+

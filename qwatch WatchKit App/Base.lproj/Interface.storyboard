@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="20037" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="20006"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller fullScreen="YES" id="AgC-eL-Hgc" customClass="InterfaceController">
+                    <items>
+                        <imageView alignment="center" verticalAlignment="center" semanticContentAttribute="playback" id="HMN-Fe-Xru">
+                            <gestureRecognizers>
+                                <tapGestureRecognizer numberOfTapsRequired="2" id="T1n-I8-Okv">
+                                    <connections>
+                                        <action selector="QWScreenDoubleTap:" destination="AgC-eL-Hgc" id="kYy-wv-PNA"/>
+                                    </connections>
+                                </tapGestureRecognizer>
+                                <longPressGestureRecognizer enabled="NO" delaysTouchesBegan="YES" minimumPressDuration="0.0" id="s0D-6S-YFy"/>
+                            </gestureRecognizers>
+                        </imageView>
+                        <group width="1" alignment="left" verticalAlignment="center" id="dfp-QZ-gQi">
+                            <items>
+                                <label alignment="center" verticalAlignment="center" hidden="YES" text="Use gyro" id="eSA-CE-gYV"/>
+                                <button width="39" alignment="center" verticalAlignment="bottom" title="^" id="dnd-bn-svC">
+                                    <gestureRecognizers>
+                                        <longPressGestureRecognizer minimumPressDuration="0.0" id="pZA-mj-JKu">
+                                            <connections>
+                                                <action selector="QWForwardLongPressAction:" destination="AgC-eL-Hgc" id="HEr-Hn-knw"/>
+                                            </connections>
+                                        </longPressGestureRecognizer>
+                                    </gestureRecognizers>
+                                </button>
+                                <button width="39" alignment="center" verticalAlignment="bottom" title="&lt;" id="u9p-CA-L0h" userLabel="Left Button">
+                                    <gestureRecognizers>
+                                        <longPressGestureRecognizer minimumPressDuration="0.0" id="Rf0-GM-iXh">
+                                            <connections>
+                                                <action selector="QWLeftLongPressAction:" destination="AgC-eL-Hgc" id="JCg-wQ-kik"/>
+                                            </connections>
+                                        </longPressGestureRecognizer>
+                                    </gestureRecognizers>
+                                </button>
+                                <button width="39" alignment="center" title="&gt;" id="NxH-4h-6pP">
+                                    <gestureRecognizers>
+                                        <longPressGestureRecognizer minimumPressDuration="0.0" id="7bI-M9-7PD">
+                                            <connections>
+                                                <action selector="QWRightLongPressAction:" destination="AgC-eL-Hgc" id="6qI-Xp-GBU"/>
+                                            </connections>
+                                        </longPressGestureRecognizer>
+                                    </gestureRecognizers>
+                                </button>
+                                <button width="39" alignment="center" title="F" id="d30-zh-gRB">
+                                    <connections>
+                                        <action selector="QWFireButtonPressed:" destination="AgC-eL-Hgc" id="f3F-zo-Q6C"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <label alignment="center" text="FPS" id="zUx-qE-sOF">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="font" type="system" pointSize="6"/>
+                        </label>
+                    </items>
+                    <connections>
+                        <outlet property="fpsLabel" destination="zUx-qE-sOF" id="bjy-ue-qA8"/>
+                        <outlet property="gyroLabel" destination="eSA-CE-gYV" id="ViX-g5-Jc6"/>
+                        <outlet property="imageView" destination="HMN-Fe-Xru" id="cAR-7n-1ez"/>
+                        <outlet property="leftButton" destination="u9p-CA-L0h" id="kKQ-SM-G6X"/>
+                        <outlet property="rightButton" destination="NxH-4h-6pP" id="99p-ed-2fO"/>
+                        <outlet property="upButton" destination="dnd-bn-svC" id="LlO-fQ-3W4"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-26" y="-44"/>
+        </scene>
+    </scenes>
+</document>

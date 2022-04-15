@@ -1,0 +1,40 @@
+GITHUB RELEASE TODO:
+ - remove shareware assets
+
+TODO:
+ - gamepad support? mfi
+ - control via compass? see MagnetometerController in Watch-App-Sampler
+ - use crown for changing weapons
+
+ CANCELLED:
+ - voice control - would be just a gimmick
+    - cheetah is unusable, so current plan is to use speech recognition on iphone
+        /Users/tomas/work/iOS_Playground/SpeechRecognitionPractice/SpeechRecognitionPractice.xcodeproj
+    - but record on watch
+        /Users/tomas/work/watchAVAudioRecorder/WatchAVAudioRecorder.xcodeproj
+    
+        watch <-> iphone communication: https://stackoverflow.com/questions/27030296/watchkit-ios-sending-data-between-watch-and-iphone
+
+DONE:
+    - add shell script to download shareware assets
+    - add origin links for a few snippets copied over from stackoverflow
+    - add origin links for original Mac port
+    - fix FPS cap and stats
+    - add high pass filter:
+        https://developer.apple.com/documentation/avfaudio/avaudiouniteqfiltertype
+        https://stackoverflow.com/questions/60409092/low-pass-filter
+    
+    - try playing the guncock.wav file directly on device
+    - solve memleaks crashes on (the higher the internal engine framebuffer resolution, the sooner it happens)
+    - load the actual game (not just demo)
+        - load command for loading of level ("e1m1") fails on network not being available, quake console commands: https://www.eecis.udel.edu/~portnoi/quake/quakecom.html#changelevel
+            - it uses local device for network, but there is nothing in net_watch driver array, so i need to add something here
+    - use crown for movement (down -> turn, up - forward)
+    - to keep steady frametimes, wait if we are to soon to deliver next frame
+    - siri control
+    - clamp? audio sample? clamp(data[i], -1.0f, 1.0f);
+     
+ - https://stackoverflow.com/questions/64261293/scratchy-avaudioengine-on-apple-watch
+    - https://github.com/GrantJEmerson/SwiftSynth
+    - synth ported to watch but no reso frequency found, sounds good so far,
+    - next: try different shapes than sine wave

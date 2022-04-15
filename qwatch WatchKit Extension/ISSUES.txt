@@ -1,0 +1,3 @@
+FIXME:
+    * some portions of blitting & audio back-end code is !!! probably !!! leaking, does not look substantial from the Instruments data, but I really do not understand Obj-C object livecycle (and it's ARC) fully
+        * this does not seem to be blocker (if it is a thing at all), Quake is able to run for long periods of time on device and in Simulator
