@@ -2,6 +2,13 @@ Quake 1 port to Apple Watch
 
 Youtube video: https://www.youtube.com/watch?v=cPC2o262TfQ
 
+Some features:
+* uses Quake SW renderer + blitting to WatchKit surface (~60 fps, 640x480, larger res can run on lower framerate, tested up until 1024x768) 
+* touch + gyro + digital crown controls
+* new AVFoundation audio backend (quake to Watchkit audio buffer copy logic), as Watchkit does not support CoreAudio
+* high pass audio filter to remove clicking on Watch speaker for some of the low frequency quake .wav samples
+* some smaller modifications and code updates to glue Quake 1 c code to Objective C and Watchkit
+
 made by Tomas MyOwnClone Vymazal (building on the shoulders of giants)
 
 based on id software open source release and open source ports to Mac and iOS
