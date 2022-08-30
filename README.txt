@@ -1,5 +1,7 @@
 Quake 1 port to Apple Watch
 
+Youtube video: https://www.youtube.com/watch?v=cPC2o262TfQ
+
 made by Tomas MyOwnClone Vymazal (building on the shoulders of giants)
 
 based on id software open source release and open source ports to Mac and iOS
