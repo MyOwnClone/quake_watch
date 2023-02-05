@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "quake_ico_1024x1024-14.png",
+      "filename" : "48.png",
       "idiom" : "watch",
       "role" : "notificationCenter",
       "scale" : "2x",
@@ -9,7 +9,7 @@
       "subtype" : "38mm"
     },
     {
-      "filename" : "quake_ico_1024x1024-13.png",
+      "filename" : "55.png",
       "idiom" : "watch",
       "role" : "notificationCenter",
       "scale" : "2x",
@@ -17,21 +17,21 @@
       "subtype" : "42mm"
     },
     {
-      "filename" : "quake_ico_1024x1024-11.png",
+      "filename" : "58.png",
       "idiom" : "watch",
       "role" : "companionSettings",
       "scale" : "2x",
       "size" : "29x29"
     },
     {
-      "filename" : "quake_ico_1024x1024-10.png",
+      "filename" : "87.png",
       "idiom" : "watch",
       "role" : "companionSettings",
       "scale" : "3x",
       "size" : "29x29"
     },
     {
-      "filename" : "quake_ico_1024x1024-12.png",
+      "filename" : "66.png",
       "idiom" : "watch",
       "role" : "notificationCenter",
       "scale" : "2x",
@@ -39,7 +39,7 @@
       "subtype" : "45mm"
     },
     {
-      "filename" : "quake_ico_1024x1024-1.png",
+      "filename" : "80.png",
       "idiom" : "watch",
       "role" : "appLauncher",
       "scale" : "2x",
@@ -47,7 +47,7 @@
       "subtype" : "38mm"
     },
     {
-      "filename" : "quake_ico_1024x1024-2.png",
+      "filename" : "88.png",
       "idiom" : "watch",
       "role" : "appLauncher",
       "scale" : "2x",
@@ -55,7 +55,7 @@
       "subtype" : "40mm"
     },
     {
-      "filename" : "quake_ico_1024x1024-3.png",
+      "filename" : "92.png",
       "idiom" : "watch",
       "role" : "appLauncher",
       "scale" : "2x",
@@ -63,7 +63,7 @@
       "subtype" : "41mm"
     },
     {
-      "filename" : "quake_ico_1024x1024-4.png",
+      "filename" : "100.png",
       "idiom" : "watch",
       "role" : "appLauncher",
       "scale" : "2x",
@@ -71,7 +71,6 @@
       "subtype" : "44mm"
     },
     {
-      "filename" : "quake_ico_1024x1024-5.png",
       "idiom" : "watch",
       "role" : "appLauncher",
       "scale" : "2x",
@@ -79,7 +78,14 @@
       "subtype" : "45mm"
     },
     {
-      "filename" : "quake_ico_1024x1024-6.png",
+      "idiom" : "watch",
+      "role" : "appLauncher",
+      "scale" : "2x",
+      "size" : "54x54",
+      "subtype" : "49mm"
+    },
+    {
+      "filename" : "172.png",
       "idiom" : "watch",
       "role" : "quickLook",
       "scale" : "2x",
@@ -87,7 +93,7 @@
       "subtype" : "38mm"
     },
     {
-      "filename" : "quake_ico_1024x1024-7.png",
+      "filename" : "196.png",
       "idiom" : "watch",
       "role" : "quickLook",
       "scale" : "2x",
@@ -95,7 +101,7 @@
       "subtype" : "42mm"
     },
     {
-      "filename" : "quake_ico_1024x1024-8.png",
+      "filename" : "216.png",
       "idiom" : "watch",
       "role" : "quickLook",
       "scale" : "2x",
@@ -103,7 +109,6 @@
       "subtype" : "44mm"
     },
     {
-      "filename" : "quake_ico_1024x1024-9.png",
       "idiom" : "watch",
       "role" : "quickLook",
       "scale" : "2x",
@@ -111,7 +116,14 @@
       "subtype" : "45mm"
     },
     {
-      "filename" : "quake_ico_1024x1024.png",
+      "idiom" : "watch",
+      "role" : "quickLook",
+      "scale" : "2x",
+      "size" : "129x129",
+      "subtype" : "49mm"
+    },
+    {
+      "filename" : "1024.png",
       "idiom" : "watch-marketing",
       "scale" : "1x",
       "size" : "1024x1024"
