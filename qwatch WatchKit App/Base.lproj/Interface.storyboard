@@ -24,7 +24,7 @@
                         <group width="1" alignment="left" verticalAlignment="center" id="dfp-QZ-gQi">
                             <items>
                                 <label alignment="center" verticalAlignment="center" hidden="YES" text="Use gyro" id="eSA-CE-gYV"/>
-                                <button width="39" alignment="center" verticalAlignment="bottom" title="^" id="dnd-bn-svC">
+                                <button width="39" alignment="center" verticalAlignment="bottom" title="▲" id="dnd-bn-svC">
                                     <gestureRecognizers>
                                         <longPressGestureRecognizer minimumPressDuration="0.0" id="pZA-mj-JKu">
                                             <connections>
@@ -33,7 +33,7 @@
                                         </longPressGestureRecognizer>
                                     </gestureRecognizers>
                                 </button>
-                                <button width="39" alignment="center" verticalAlignment="bottom" title="&lt;" id="u9p-CA-L0h" userLabel="Left Button">
+                                <button width="39" alignment="center" verticalAlignment="bottom" title="◀" id="u9p-CA-L0h" userLabel="Left Button">
                                     <gestureRecognizers>
                                         <longPressGestureRecognizer minimumPressDuration="0.0" id="Rf0-GM-iXh">
                                             <connections>
@@ -42,7 +42,7 @@
                                         </longPressGestureRecognizer>
                                     </gestureRecognizers>
                                 </button>
-                                <button width="39" alignment="center" title="&gt;" id="NxH-4h-6pP">
+                                <button width="39" alignment="center" title="▶" id="NxH-4h-6pP">
                                     <gestureRecognizers>
                                         <longPressGestureRecognizer minimumPressDuration="0.0" id="7bI-M9-7PD">
                                             <connections>
@@ -51,7 +51,7 @@
                                         </longPressGestureRecognizer>
                                     </gestureRecognizers>
                                 </button>
-                                <button width="39" alignment="center" title="F" id="d30-zh-gRB">
+                                <button width="39" alignment="center" title="✛" id="d30-zh-gRB">
                                     <connections>
                                         <action selector="QWFireButtonPressed:" destination="AgC-eL-Hgc" id="f3F-zo-Q6C"/>
                                     </connections>
