@@ -170,10 +170,19 @@
     }
 }
 
+BOOL messageDisplayed = 0;
 - (void)willActivate
 {
     [super willActivate];
     [self.crownSequencer focus];
+    
+    if (messageDisplayed == 0) {
+        [self presentAlertControllerWithTitle:@"" message:@"Double-tap on the left side to change controls.\n\nDouble-tap on the right side to choose a map." preferredStyle: WKAlertControllerStyleAlert actions: @[
+            [WKAlertAction actionWithTitle:@"OK" style:WKAlertActionStyleDefault handler:^{}],
+        ]];
+        messageDisplayed = 1;
+    }
+    
 }
 
 - (IBAction)QWForwardLongPressAction:(id)sender
@@ -200,34 +209,34 @@
     [super awakeWithContext:context];
     
     // Configure interface objects here.
-        NSMutableArray *gameLevels;
-        gameLevels = [[NSMutableArray alloc] init];
-        WKPickerItem *item = [[WKPickerItem alloc] init];
-        item.title = @"Playdemo";
-        [gameLevels addObject: item];
-        item = [[WKPickerItem alloc] init];
-        item.title = @"Map 1";
-        [gameLevels addObject: item];
-        item = [[WKPickerItem alloc] init];
-        item.title = @"Map 2";
-        [gameLevels addObject: item];
-        item = [[WKPickerItem alloc] init];
-        item.title = @"Map 3";
-        [gameLevels addObject: item];
-        item = [[WKPickerItem alloc] init];
-        item.title = @"Map 4";
-        [gameLevels addObject: item];
-        item = [[WKPickerItem alloc] init];
-        item.title = @"Map 5";
-        [gameLevels addObject: item];
-        item = [[WKPickerItem alloc] init];
-        item.title = @"Map 6";
-        [gameLevels addObject: item];
-        item = [[WKPickerItem alloc] init];
-        item.title = @"Map 7";
-        [gameLevels addObject: item];
-        
-        [self.chooseLevel setItems:gameLevels];
+    NSMutableArray *gameLevels;
+    gameLevels = [[NSMutableArray alloc] init];
+    WKPickerItem *item = [[WKPickerItem alloc] init];
+    item.title = @"Playdemo";
+    [gameLevels addObject: item];
+    item = [[WKPickerItem alloc] init];
+    item.title = @"Map 1";
+    [gameLevels addObject: item];
+    item = [[WKPickerItem alloc] init];
+    item.title = @"Map 2";
+    [gameLevels addObject: item];
+    item = [[WKPickerItem alloc] init];
+    item.title = @"Map 3";
+    [gameLevels addObject: item];
+    item = [[WKPickerItem alloc] init];
+    item.title = @"Map 4";
+    [gameLevels addObject: item];
+    item = [[WKPickerItem alloc] init];
+    item.title = @"Map 5";
+    [gameLevels addObject: item];
+    item = [[WKPickerItem alloc] init];
+    item.title = @"Map 6";
+    [gameLevels addObject: item];
+    item = [[WKPickerItem alloc] init];
+    item.title = @"Map 7";
+    [gameLevels addObject: item];
+    [self.chooseLevel setItems:gameLevels];
+    
     
     g_QWGyroEnabled = false;
     
