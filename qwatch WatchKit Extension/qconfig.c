@@ -12,7 +12,7 @@
 
 const float kQWLowestPossibleTimeInterval = 1e-3;  //seconds
 
-const float kQWMovementSpeed = 0.4;
+const float kQWMovementSpeed = 0.6;
 
 const float kQWMovementSpeedGyroMultiplier = 0.25;
 

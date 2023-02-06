@@ -214,11 +214,11 @@
         
                             const float threshold = 0.2f;
         
-                            if (pitch < -threshold)
+                            if (pitch < threshold)
                             {
                                 QWGyroMoveForwardDirect();
                             }
-                            else if (pitch > threshold)
+                            else if (pitch > (threshold + 0.4f))
                             {
                                 QWGyroMoveBackwardDirect();
                             }
