@@ -110,6 +110,10 @@
     if (location.x < gestureRecognizer.objectBounds.size.width/2)
     {
         g_QWGyroEnabled = !g_QWGyroEnabled;
+        if (g_QWGyroEnabled == false)
+        {
+            QWStopGyroTranslationMovement();
+        }
     }
     // tap on right side
     else
