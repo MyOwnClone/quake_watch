@@ -120,14 +120,25 @@
     {
         g_QWModeGameplay = !g_QWModeGameplay;
         
-        if (g_QWModeGameplay)
-        {
-            QWStartGameplay();
-        }
-        else
-        {
-            QWStartDemo();
-        }
+        [_chooseLevel setHidden: false];
+        [_confirmLevel setHidden: false];
+    }
+}
+
+- (IBAction)levelChanged:(NSInteger)idx {
+    self.level = idx;
+}
+
+- (IBAction)QWLevelConfirmPressed:(id)sender
+{
+    [_chooseLevel setHidden: true];
+    [_confirmLevel setHidden: true];
+    if (self.level == 0)
+    {
+        QWStartDemo();
+    }
+    else {
+        QWStartGameplay(self.level);
     }
 }
 
@@ -187,6 +198,36 @@
 - (void)awakeWithContext:(id)context
 {
     [super awakeWithContext:context];
+    
+    // Configure interface objects here.
+        NSMutableArray *gameLevels;
+        gameLevels = [[NSMutableArray alloc] init];
+        WKPickerItem *item = [[WKPickerItem alloc] init];
+        item.title = @"Playdemo";
+        [gameLevels addObject: item];
+        item = [[WKPickerItem alloc] init];
+        item.title = @"Map 1";
+        [gameLevels addObject: item];
+        item = [[WKPickerItem alloc] init];
+        item.title = @"Map 2";
+        [gameLevels addObject: item];
+        item = [[WKPickerItem alloc] init];
+        item.title = @"Map 3";
+        [gameLevels addObject: item];
+        item = [[WKPickerItem alloc] init];
+        item.title = @"Map 4";
+        [gameLevels addObject: item];
+        item = [[WKPickerItem alloc] init];
+        item.title = @"Map 5";
+        [gameLevels addObject: item];
+        item = [[WKPickerItem alloc] init];
+        item.title = @"Map 6";
+        [gameLevels addObject: item];
+        item = [[WKPickerItem alloc] init];
+        item.title = @"Map 7";
+        [gameLevels addObject: item];
+        
+        [self.chooseLevel setItems:gameLevels];
     
     g_QWGyroEnabled = false;
     

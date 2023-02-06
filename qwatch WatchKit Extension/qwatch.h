@@ -72,7 +72,7 @@ void QWGyroMoveBackwardDirect(void);
 void QWGyroMoveForwardDirect(void);
 void QWLoopDownCommand(int stepCount);
 void QWLoopUpCommand(int stepCount);
-void QWStartGameplay(void);
+void QWStartGameplay(NSInteger);
 void QWStartDemo(void);
 
 void Sys_Init(const char* resourcesDir, const char* documentsDir, const char* commandLine);
