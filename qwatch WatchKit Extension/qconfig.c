@@ -12,9 +12,9 @@
 
 const float kQWLowestPossibleTimeInterval = 1e-3;  //seconds
 
-const float kQWMovementSpeed = 0.4;
+const float kQWMovementSpeed = 0.6;
 
-const float kQWMovementSpeedGyroMultiplier = 0.25;
+const float kQWMovementSpeedGyroMultiplier = 0.5;
 
 const struct RuntimeConfig kQWRuntimeConfigs[] = {
     /* refresh interval,          xres, yres */

@@ -178,10 +178,12 @@ void QWInitializeGlobals()
 typedef enum {false, true}    qboolean;
 #include "id1/cmd.h"
 
-void QWStartGameplay(void)
+void QWStartGameplay(NSInteger level)
 {
     // load playable map
-    Cmd_ExecuteString("map \"e1m1\"" , src_command /* src_client */);
+    char mapCmd[11];
+    sprintf(mapCmd, "map \"e1m%ld\"", (long)level);
+    Cmd_ExecuteString(mapCmd , src_command /* src_client */);
 }
 
 void QWStartDemo(void)
@@ -212,7 +214,7 @@ void QWInitializeIdTech()
     
     Sys_Init([resourceDir UTF8String], [pakFilename UTF8String], [commandLine UTF8String]);
     
-    QWStartGameplay();
+    QWStartGameplay(1);
 }
 
 void QWInitializeConfig(void)

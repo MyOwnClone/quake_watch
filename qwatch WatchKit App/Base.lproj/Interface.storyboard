@@ -11,6 +11,16 @@
             <objects>
                 <controller fullScreen="YES" id="AgC-eL-Hgc" customClass="InterfaceController">
                     <items>
+                        <picker height="100" alignment="left" hidden="YES" focusStyle="stack" id="w1L-wk-Fxm">
+                            <connections>
+                                <action selector="levelChanged:" destination="AgC-eL-Hgc" id="Dep-Nx-8BR"/>
+                            </connections>
+                        </picker>
+                        <button width="1" alignment="left" hidden="YES" title="Confirm" id="z0x-S5-ixZ">
+                            <connections>
+                                <action selector="QWLevelConfirmPressed:" destination="AgC-eL-Hgc" id="YVd-ez-XKy"/>
+                            </connections>
+                        </button>
                         <imageView alignment="center" verticalAlignment="center" semanticContentAttribute="playback" id="HMN-Fe-Xru">
                             <gestureRecognizers>
                                 <tapGestureRecognizer numberOfTapsRequired="2" id="T1n-I8-Okv">
@@ -24,7 +34,7 @@
                         <group width="1" alignment="left" verticalAlignment="center" id="dfp-QZ-gQi">
                             <items>
                                 <label alignment="center" verticalAlignment="center" hidden="YES" text="Use gyro" id="eSA-CE-gYV"/>
-                                <button width="39" alignment="center" verticalAlignment="bottom" title="^" id="dnd-bn-svC">
+                                <button width="39" alignment="center" verticalAlignment="bottom" title="▲" id="dnd-bn-svC">
                                     <gestureRecognizers>
                                         <longPressGestureRecognizer minimumPressDuration="0.0" id="pZA-mj-JKu">
                                             <connections>
@@ -33,7 +43,7 @@
                                         </longPressGestureRecognizer>
                                     </gestureRecognizers>
                                 </button>
-                                <button width="39" alignment="center" verticalAlignment="bottom" title="&lt;" id="u9p-CA-L0h" userLabel="Left Button">
+                                <button width="39" alignment="center" verticalAlignment="bottom" title="◀" id="u9p-CA-L0h" userLabel="Left Button">
                                     <gestureRecognizers>
                                         <longPressGestureRecognizer minimumPressDuration="0.0" id="Rf0-GM-iXh">
                                             <connections>
@@ -42,7 +52,7 @@
                                         </longPressGestureRecognizer>
                                     </gestureRecognizers>
                                 </button>
-                                <button width="39" alignment="center" title="&gt;" id="NxH-4h-6pP">
+                                <button width="39" alignment="center" title="▶" id="NxH-4h-6pP">
                                     <gestureRecognizers>
                                         <longPressGestureRecognizer minimumPressDuration="0.0" id="7bI-M9-7PD">
                                             <connections>
@@ -51,7 +61,7 @@
                                         </longPressGestureRecognizer>
                                     </gestureRecognizers>
                                 </button>
-                                <button width="39" alignment="center" title="F" id="d30-zh-gRB">
+                                <button width="39" alignment="center" title="✛" id="d30-zh-gRB">
                                     <connections>
                                         <action selector="QWFireButtonPressed:" destination="AgC-eL-Hgc" id="f3F-zo-Q6C"/>
                                     </connections>
@@ -64,6 +74,8 @@
                         </label>
                     </items>
                     <connections>
+                        <outlet property="chooseLevel" destination="w1L-wk-Fxm" id="LlO-fQ-3W5"/>
+                        <outlet property="confirmLevel" destination="z0x-S5-ixZ" id="LlO-fQ-3W6"/>
                         <outlet property="fpsLabel" destination="zUx-qE-sOF" id="bjy-ue-qA8"/>
                         <outlet property="gyroLabel" destination="eSA-CE-gYV" id="ViX-g5-Jc6"/>
                         <outlet property="imageView" destination="HMN-Fe-Xru" id="cAR-7n-1ez"/>

@@ -29,4 +29,7 @@
     @property AVAudioFormat *format;
     @property AVAudioMixerNode* audioMixer;
     @property NSThread* audioThread;
+    @property (nonatomic) NSInteger level;
+    @property (weak, nonatomic) IBOutlet WKInterfacePicker *chooseLevel;
+    @property (weak, nonatomic) IBOutlet WKInterfaceButton *confirmLevel;
 @end
