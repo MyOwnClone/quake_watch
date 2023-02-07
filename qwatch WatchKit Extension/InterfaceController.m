@@ -113,6 +113,7 @@
         if (g_QWGyroEnabled == false)
         {
             QWStopGyroTranslationMovement();
+            QWStopGyroTurning();
         }
     }
     // tap on right side
